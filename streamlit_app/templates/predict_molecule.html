@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CD73 Inhibitor Bioactivity Prediction App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h1>CD73 Inhibitor Bioactivity Prediction App</h1>
+            <p>By Francesco D'Aleo</p>
+
+            <p>This app is inspired by the content featured on the YouTube channel located at <a href="https://www.youtube.com/@DataProfessor">https://www.youtube.com/@DataProfessor</a>.</p>
+            <p>The purpose of this app is to predict the bioactivity of CD73 inhibitors using molecular descriptors from the PaDEL-Descriptor software.
+                These features are then used to train a machine learning model on the ChEMBL Database. Users can input a molecule in the form of a SMILES string or upload a file containing multiple molecules.</p>
+
+            <img src="{% static 'myapp/image1.png' %}" alt="Image 1" width="20%">
+
+            <p>Tumors, a disease with a high mortality rate worldwide, have become a serious threat to human health.
+                Exonucleotide-5'-nucleotidase (CD73) is an emerging target for tumor therapy.
+                Its inhibition can significantly reduce adenosine levels in the tumor microenvironment.
+                In the immune response, extracellular ATP exerts immune efficacy by activating T cells.
+                However, dead tumor cells release excess ATP, overexpress CD39 and CD73 on the cell membrane and catabolize this ATP to adenosine.
+                This leads to further immunosuppression. There are a number of inhibitors of CD73 currently under investigation. (Zhang et al., 2023).</p>
+
+            <img src="{% static 'myapp/image2.png' %}" alt="Image 2" width="20%">
+            <p>Image from <a href="www.bellbrooklabs.com">www.bellbrooklabs.com</a></p>
+
+
+        </div>
+        <div class="right-section">
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>CD73 Inhibitor Bioactivity Prediction App - Predict Molecule</title>
+            </head>
+            <body>
+                <form method="post" enctype="multipart/form-data" action="{% url 'predict_molecule' %}">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Predict Molecule</button>
+                </form>
+            </body>
+            </html>
+        </div>
+    </div>
+</body>
+</html>
+
