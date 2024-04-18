@@ -29,7 +29,7 @@ This Django application provides a convenient tool for predicting the bioactivit
 1. Run the Django development server:
 
     ```bash
-    python manage.py runserver
+    python manage.py runserver 8000
     ```
 
 2. Access the application in your web browser at [http://127.0.0.1:8000/app/predict-molecule/](http://127.0.0.1:8000/app/predict-molecule/).
