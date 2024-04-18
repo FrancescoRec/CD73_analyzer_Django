@@ -2,6 +2,8 @@
 
 This Django application provides a convenient tool for predicting the bioactivity of CD73 inhibitors by leveraging molecular descriptors extracted from the PaDEL-Descriptor software. Through these descriptors, a machine learning model trained on the ChEMBL Database makes predictions.
 
+---
+
 ## Installation
 
 1. Clone the repository to your local machine:
@@ -16,13 +18,33 @@ This Django application provides a convenient tool for predicting the bioactivit
     cd cd73-inhibitor-prediction-app
     ```
 
-3. Install the required Python packages:
+3. Create a virtual environment (optional but recommended):
+
+    ```bash
+    python -m venv venv
+    ```
+
+4. Activate the virtual environment:
+
+    - **For Windows:**
+
+        ```bash
+        venv\Scripts\activate
+        ```
+
+    - **For macOS/Linux:**
+
+        ```bash
+        source venv/bin/activate
+        ```
+
+5. Install the required Python packages:
 
     ```bash
     pip install -r requirements.txt
     ```
 
-4. Set up the required Java environment and download the PaDEL-Descriptor software from PaDEL-Descriptor GitHub. Place the PaDEL-Descriptor.jar file in the root directory of the project.
+6. Set up the required Java environment and download the PaDEL-Descriptor software from PaDEL-Descriptor GitHub. Place the PaDEL-Descriptor.jar file in the root directory of the project.
 
 ## Usage
 
