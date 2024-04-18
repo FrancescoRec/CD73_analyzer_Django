@@ -19,6 +19,5 @@ from django.urls import path, include # add the include function to the import
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('playground/', include('playground.urls')), # add this line where is the start of the app and the second the include function
     path('streamlit_app/', include('streamlit_app.urls')) # add this line where is the start of the app and the second the include function
 ]
