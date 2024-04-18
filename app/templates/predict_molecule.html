@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CD73 Inhibitor Bioactivity Prediction App</title>
+    <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
 </head>
 <body>
     <div class="container">
@@ -27,27 +28,14 @@
 
             <img src="{% static 'myapp/image2.png' %}" alt="Image 2" width="20%">
             <p>Image from <a href="www.bellbrooklabs.com">www.bellbrooklabs.com</a></p>
-
-
         </div>
         <div class="right-section">
-            <!DOCTYPE html>
-            <html lang="en">
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>CD73 Inhibitor Bioactivity Prediction App - Predict Molecule</title>
-            </head>
-            <body>
-                <form method="post" enctype="multipart/form-data" action="{% url 'predict_molecule' %}">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button type="submit">Predict Molecule</button>
-                </form>
-            </body>
-            </html>
+            <form method="post" enctype="multipart/form-data" action="{% url 'predict_molecule' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Predict Molecule</button>
+            </form>
         </div>
     </div>
 </body>
 </html>
-

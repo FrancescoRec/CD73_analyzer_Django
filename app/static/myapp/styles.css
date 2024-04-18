@@ -1,0 +1,84 @@
+/* styles.css */
+
+/* Stili per il corpo della pagina */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Colore di sfondo più carino */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* Sfondo bianco */
+    border-radius: 10px; /* Bordi arrotondati */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Ombra */
+}
+
+.left-section, .right-section {
+    width: 48%;
+}
+
+/* Stili per la sezione sinistra */
+.left-section {
+    padding-right: 20px;
+}
+
+.left-section h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.left-section p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.left-section img {
+    margin-top: 20px;
+    display: block;
+    border-radius: 5px;
+}
+
+/* styles.css */
+
+/* Stili per la sezione destra */
+.right-section {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.right-section form {
+    background-color: #f9f9f9; /* Colore di sfondo più chiaro */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex; /* Aggiunto */
+    flex-direction: column; /* Aggiunto */
+    align-items: center; /* Aggiunto */
+}
+
+.right-section form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.right-section form button:hover {
+    background-color: #0056b3;
+}

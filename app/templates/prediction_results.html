@@ -1,21 +1,25 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prediction Results</title>
+    <link rel="stylesheet" href="{% static 'myapp/style_results.css' %}">
 </head>
 <body>
     <h1>Prediction Results</h1>
 
-    {{ result_html | safe }}
-    
-    <form action="{% url 'download_view' %}" method="get" target="_blank">
-        <input type="hidden" name="result_df_json" value="{{ result_df_json }}">
-        <button type="submit">Download as Text File</button>
-    </form>
-    
-    
+    <div class="container">
+        <form action="{% url 'download_view' %}" method="get" target="_blank">
+            <input type="hidden" name="result_df_json" value="{{ result_df_json }}">
+            <button type="submit">Download as Text File</button>
+        </form>
+        <div class="result-table">
+            {{ result_html | safe }}
+        </div>
+    </div>
 </body>
 </html>
+
 
