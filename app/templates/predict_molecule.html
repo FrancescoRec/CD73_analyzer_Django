@@ -15,9 +15,9 @@
 
             <p>This app is inspired by the content featured on the YouTube channel located at <a href="https://www.youtube.com/@DataProfessor">https://www.youtube.com/@DataProfessor</a>.</p>
             <p>The purpose of this app is to predict the bioactivity of CD73 inhibitors using molecular descriptors from the PaDEL-Descriptor software.
-                These features are then used to train a machine learning model on the ChEMBL Database. Users can input a molecule in the form of a SMILES string or upload a file containing multiple molecules.</p>
+                These features are then used to train a machine learning model on the ChEMBL Database. Users can upload a file containing multiple molecules.</p>
 
-            <img src="{% static 'myapp/image1.png' %}?v=2" alt="Image 1" width="80%">
+            <img src="{% static 'myapp/image1.png' %}?v=2" alt="Image 1" width="100%">
 
             <p>Tumors, a disease with a high mortality rate worldwide, have become a serious threat to human health.
                 Exonucleotide-5'-nucleotidase (CD73) is an emerging target for tumor therapy.
@@ -26,7 +26,7 @@
                 However, dead tumor cells release excess ATP, overexpress CD39 and CD73 on the cell membrane and catabolize this ATP to adenosine.
                 This leads to further immunosuppression. There are a number of inhibitors of CD73 currently under investigation. (Zhang et al., 2023).</p>
 
-            <img src="{% static 'myapp/image2.png' %}?v=2" alt="Image 2" width="80%">
+            <img src="{% static 'myapp/image2.png' %}?v=2" alt="Image 2" width="100%">
         </div>
         <div class="right-section">
             <form method="post" enctype="multipart/form-data" action="{% url 'predict_molecule' %}">
@@ -34,6 +34,35 @@
                 {{ form.as_p }}
                 <button type="submit">Predict Molecule</button>
             </form>
+            <h3>Example File:</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>CCOc1nn(-c2cccc(OCc3ccccc3)c2)c(=O)o1</td>
+                        <td>Molecule_ID</td>
+                    </tr>
+                    <tr>
+                        <td>O=C(N1CCCCC1)n1nc(-c2ccc(Cl)cc2)nc1SCC1CC1</td>
+                        <td>Molecule_ID</td>
+                    </tr>
+                    <tr>
+                        <td>CN(C(=O)n1nc(-c2ccc(Cl)cc2)nc1SCC(F)(F)F)c1ccccc1</td>
+                        <td>Molecule_ID</td>
+                    </tr>
+                    <tr>
+                        <td>O=C(N1CCCCC1)n1nc(-c2ccc(Cl)cc2)nc1SCC(F)(F)F</td>
+                        <td>Molecule_ID</td>
+                    </tr>
+                    <tr>
+                        <td>CSc1nc(-c2ccc(OC(F)(F)F)cc2)nn1C(=O)N(C)C</td>
+                        <td>Molecule_ID</td>
+                    </tr>
+                    <tr>
+                        <td>NS(=O)(=O)O</td>
+                        <td>Molecule_ID</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </body>
