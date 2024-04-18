@@ -8,3 +8,4 @@ __MACOSX/
 /temp_file.txt
 /temp_smiles.smi
 /Dockerfile
+/descriptors_output.csv
