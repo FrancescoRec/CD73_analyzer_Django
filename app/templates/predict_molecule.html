@@ -17,7 +17,7 @@
             <p>The purpose of this app is to predict the bioactivity of CD73 inhibitors using molecular descriptors from the PaDEL-Descriptor software.
                 These features are then used to train a machine learning model on the ChEMBL Database. Users can input a molecule in the form of a SMILES string or upload a file containing multiple molecules.</p>
 
-            <img src="{% static 'myapp/image1.png' %}" alt="Image 1" width="20%">
+            <img src="{% static 'myapp/image1.png' %}?v=2" alt="Image 1" width="80%">
 
             <p>Tumors, a disease with a high mortality rate worldwide, have become a serious threat to human health.
                 Exonucleotide-5'-nucleotidase (CD73) is an emerging target for tumor therapy.
@@ -26,8 +26,7 @@
                 However, dead tumor cells release excess ATP, overexpress CD39 and CD73 on the cell membrane and catabolize this ATP to adenosine.
                 This leads to further immunosuppression. There are a number of inhibitors of CD73 currently under investigation. (Zhang et al., 2023).</p>
 
-            <img src="{% static 'myapp/image2.png' %}" alt="Image 2" width="20%">
-            <p>Image from <a href="www.bellbrooklabs.com">www.bellbrooklabs.com</a></p>
+            <img src="{% static 'myapp/image2.png' %}?v=2" alt="Image 2" width="80%">
         </div>
         <div class="right-section">
             <form method="post" enctype="multipart/form-data" action="{% url 'predict_molecule' %}">
