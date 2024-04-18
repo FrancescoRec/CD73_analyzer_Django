@@ -1,7 +1,9 @@
-# git ignore padel.sh
+
 *.zip
 *.hypothesis
 *.DS_Store
 _MACOSX/
 /padel.sh
 __MACOSX/
+/temp_file.txt
+/temp_smiles.smi

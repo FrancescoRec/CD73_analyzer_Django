@@ -10,7 +10,7 @@ from .forms import UploadFileForm
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def desc_calc():
-    bashCommand = "java -Xms2G -Xmx2G -Djava -jar ./PaDEL-Descriptor/PaDEL-Descriptor.jar -removesalt -standardizenitro -fingerprints -descriptortypes ./PaDEL-Descriptor/PubchemFingerprinter.xml -dir ./models/ -file descriptors_output.csv"
+    bashCommand = "java -Xms2G -Xmx2G -Djava -jar ./PaDEL-Descriptor/PaDEL-Descriptor.jar -removesalt -standardizenitro -fingerprints -descriptortypes ./PaDEL-Descriptor/PubchemFingerprinter.xml -dir ./ -file descriptors_output.csv"
     process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
     output, error = process.communicate()
 
@@ -60,8 +60,8 @@ def predict_molecule(request):
             desc_calc()
 
             try:
-                desc = pd.read_csv('models/descriptors_output.csv')
-                Xlist = list(pd.read_csv('models/descriptor_list.csv').columns)
+                desc = pd.read_csv('descriptors_output.csv')
+                Xlist = list(pd.read_csv('descriptor_list.csv').columns)
                 desc_subset = desc[Xlist]
             except Exception as e:
                 return HttpResponse(f"Error occurred while reading descriptor data: {e}")
