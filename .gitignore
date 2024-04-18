@@ -7,3 +7,4 @@ _MACOSX/
 __MACOSX/
 /temp_file.txt
 /temp_smiles.smi
+/Dockerfile
